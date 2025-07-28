@@ -1,6 +1,11 @@
-const Section=()=>{
-    return(
-        <section>Section</section>
+const Section = () => {
+    return (
+        <section>
+            <div className="centrar" id="s1">
+                <h1>¿AÚN NO SABES QUÉ ES?</h1>
+                <p>Es una historia donde jóvenes abandonan su hogar para hacer pelear pokemones por razones cuestionables</p>
+            </div>
+        </section>
     )
 }
 
