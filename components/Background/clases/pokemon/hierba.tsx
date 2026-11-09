@@ -1,5 +1,5 @@
 import { Group } from "three";
-import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
+import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
 import Scene from "../../scenes/Scene";
 
 export default class hierba {
