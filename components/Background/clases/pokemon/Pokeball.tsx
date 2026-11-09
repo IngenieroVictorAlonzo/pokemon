@@ -22,8 +22,8 @@ export default class Pokeball {
         if (window.innerWidth > 900) {
             const ratio = (window.innerWidth - 900) * 8 / 460 + 14
             this.object.translateY(-1)
-            //this.object.translateX(10)
-            this.object.translateX(ratio)
+            this.object.translateX(17)
+            //this.object.translateX(ratio)
             this.object.translateZ(-25)
             this.object.rotateY(-Math.PI / 1.5)
         } else {

@@ -6,7 +6,7 @@ export default class Camara extends PerspectiveCamera {
 
     constructor() {
 
-        super(75, window.innerWidth / window.innerHeight, 0.1, 1000)
+        super(70, window.innerWidth / window.innerHeight, 0.1, 1000)
         this.container = document.getElementById("container")
         this.container.onscroll = this.moverCamara.bind(this)
         this.moverCamara()
