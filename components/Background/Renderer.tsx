@@ -9,7 +9,7 @@ export default class Renderer extends WebGLRenderer {
             canvas: document.getElementById("bg")
         })
 
-        console.log("¿Es WebGL?", this.isWebGLRenderer)
+        //console.log("¿Es WebGL?", this.isWebGLRenderer)
 
         this.config()
 
