@@ -21,7 +21,7 @@ export default class Logo {
         if (window.innerWidth > 900) {
             const ratio = (window.innerWidth - 900) * 3.2 / 460 + 5.6
             this.object.translateY(4)
-            this.object.translateX(4)
+            this.object.translateX(ratio)
         } else {
             this.object.translateY(7)
         }

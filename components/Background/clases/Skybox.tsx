@@ -6,6 +6,7 @@ export default class Skybox {
         const skyGeometry = new SphereGeometry(360, 25, 25)
         const loader = new TextureLoader()
         const textura = loader.load("/Lush_swamp_world.jpg")
+        //const textura = loader.load("/escena_skybox.jpeg")
         //const textura = loader.load("/custom-sky.png")
         const material2 = new MeshPhongMaterial({
             map: textura

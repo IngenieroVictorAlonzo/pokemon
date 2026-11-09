@@ -22,8 +22,9 @@ export default class Pokeball {
         if (window.innerWidth > 900) {
             const ratio = (window.innerWidth - 900) * 8 / 460 + 14
             this.object.translateY(-1)
-            this.object.translateX(10)
-            this.object.translateZ(-23)
+            //this.object.translateX(10)
+            this.object.translateX(ratio)
+            this.object.translateZ(-25)
             this.object.rotateY(-Math.PI / 1.5)
         } else {
             this.object.translateY(5.8)
@@ -37,7 +38,7 @@ export default class Pokeball {
 
     private update() {
         const delta = this.clock.getDelta()
-        console.log(delta)
+        //console.log(delta)
         if (this.object) this.animation.update(delta)
         requestAnimationFrame(this.update.bind(this))
     }

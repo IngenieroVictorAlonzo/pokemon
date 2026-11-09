@@ -13,6 +13,7 @@ export default function HomePage() {
         <Section2 />
         <Section3 />
       </div>
+      
       <Background />
     </div>
   )

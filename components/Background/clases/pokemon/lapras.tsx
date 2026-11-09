@@ -27,7 +27,7 @@ export default class lapras {
         } else {
             this.object.translateZ(38.5)
             this.object.translateY(1.8)
-            this.object.translateX(0.4)
+            this.object.translateX(-0.3)
         }
         this.object.scale.set(0.35, 0.35, 0.35)
     }
