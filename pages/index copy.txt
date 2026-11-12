@@ -1,0 +1,87 @@
+import Background from "../components/Background"
+import Section from "../components/Section"
+import Section2 from "../components/Section2"
+import Section3 from "../components/Section3"
+
+const musica = document.getElementById("musica") as HTMLAudioElement;
+const btnAudio = document.getElementById("btnAudio");
+const volumen = document.getElementById("volumen") as HTMLInputElement;
+
+// ------------------------------------
+// BOTÓN AUDIO
+// ------------------------------------
+
+btnAudio.addEventListener("click", async () => {
+
+    if (musica.paused) {
+
+        try {
+
+            await musica.play();
+
+            btnAudio.textContent = "🔊";
+
+        } catch (error) {
+
+            console.error(
+                "No se pudo reproducir el audio:",
+                error
+            );
+
+        }
+
+    } else {
+
+        musica.pause();
+
+        btnAudio.textContent = "🔇";
+    }
+
+});
+
+
+// ------------------------------------
+// VOLUMEN
+// ------------------------------------
+
+volumen.addEventListener("input", () => {
+
+    musica.volume = Number(volumen.value);
+
+    if (musica.volume === 0) {
+
+        btnAudio.textContent = "🔇";
+
+    } else if (!musica.paused) {
+
+        btnAudio.textContent = "🔊";
+
+    }
+
+});
+
+
+
+export default function HomePage() {
+
+  return (
+    <div>
+      <div id="container">
+        <Section />
+        <Section2 />
+        <Section3 />
+
+      </div>
+      <div className="audio-control">
+        <button id="btnAudio"> 🔇 </button>
+        <input type="range" id="volumen" min="0" max="1" step="0.01" value="0.4" />
+      </div>
+      <audio id="musica" loop>
+        <source src="/pokemon-intro.mp3" type="audio/mpeg" />
+      </audio>
+      <Background />
+
+
+    </div>
+  )
+}

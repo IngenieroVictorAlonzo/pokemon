@@ -36,3 +36,32 @@ canvas{
 ::-webkit-scrollbar-thumb:hover{
     background-color: rgb(135,249,253);
 }
+
+.audio-control {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    padding: 10px 15px;
+
+    background: rgba(0, 0, 0, 0.75);
+    border-radius: 30px;
+}
+
+.audio-control button {
+    border: none;
+    background: transparent;
+
+    color: white;
+    font-size: 22px;
+
+    cursor: pointer;
+}
+
+.audio-control input {
+    width: 100px;
+}
